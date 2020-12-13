@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Çalışan Ekle</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/shards.min.css">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h2 class="mb-5">Yeni Çalışan</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <form action="#" th:action="@{/pages/employee}" th:object="${employeeContext}" method="POST">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="name" class="col-form-label">İsim</label>
+                                <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="İsim">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName" class="col-form-label">Soyisim</label>
+                                <input type="text" th:field="*{lastName}" class="form-control" id="lastName" placeholder="Soyisim">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label for="gender" class="col-form-label">Cinsiyet</label>
+                                <input type="text" th:field="*{gender}" class="form-control" id="gender" placeholder="Cinsiyet">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="birthDate" class="col-form-label">Doğum Tarihi</label>
+								<input type="date" th:value="*{birthDate}" id="birthDate" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mt-5">
+                                <input type="submit" class="btn btn-primary" value="Kaydet">
+                            </div>
+                        </div>    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
