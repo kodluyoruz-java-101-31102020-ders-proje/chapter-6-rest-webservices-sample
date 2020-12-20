@@ -17,6 +17,7 @@ import demo.spring.boot.service.EmployeeService;
 import demo.spring.boot.service.model.EmployeeContext;
 
 
+// UI Page Controller
 @Controller
 @RequestMapping("/pages")
 public class PageController {

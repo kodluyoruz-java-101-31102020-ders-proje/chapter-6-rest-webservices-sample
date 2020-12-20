@@ -24,12 +24,14 @@ import demo.spring.boot.service.model.EmployeeContext;
 import demo.spring.boot.service.model.EmployeeProfile;
 
 @RunWith(SpringRunner.class)
+// Web service integration test usage with random port! You have to set this setting!
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestPropertySource({ "classpath:application.properties" })
 public class EmployeeControllerIT {
 
 	@Autowired
     private TestRestTemplate restTemplate;
+	
 	
 	@LocalServerPort
 	private int tomcatPortNo;
