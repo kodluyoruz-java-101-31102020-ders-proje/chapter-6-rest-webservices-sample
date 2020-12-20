@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import demo.spring.boot.dao.entity.Employee;
 import demo.spring.boot.service.model.EmployeeProfile;
 
+// Data Layer
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 

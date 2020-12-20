@@ -19,6 +19,7 @@ import demo.spring.boot.service.EmployeeService;
 import demo.spring.boot.service.model.EmployeeContext;
 import demo.spring.boot.service.model.EmployeeProfile;
 
+// Controller Layer (Rest Webservice Endpoints)
 @RestController
 @RequestMapping("/company")
 public class EmployeeController {

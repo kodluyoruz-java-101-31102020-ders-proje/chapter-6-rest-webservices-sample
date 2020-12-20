@@ -15,8 +15,9 @@ import demo.spring.boot.dao.mongo.repository.EmployeeDraftRepository;
 import demo.spring.boot.service.model.EmployeeContext;
 import demo.spring.boot.service.model.EmployeeProfile;
 
+// Business Layer
 @Service
-public class EmployeeService {
+public class EmployeeService implements IEmployeeService {
 
 	@Autowired
 	private EmployeeRepository employeeRepository;
